@@ -15,22 +15,45 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * SQL Buddy
+ * Run the code checker from the web.
  *
  * @package    local
- * @subpackage sqlbuddy
- * @copyright  2014 CourseBit LLC | www.coursebit.net
- * @author     Joseph Conradt | joseph.conradt@coursebit.net
+ * @subpackage adminer
+ * @copyright  Andreas Grabs
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
-error_reporting(E_ALL);
+require_once(dirname(__FILE__) . '/../../config.php');
+require_once($CFG->libdir . '/adminlib.php');
 
-require_once __DIR__ . '/../../config.php';
-require_once __DIR__ . '/functions.php';
+require_login();
+require_capability('moodle/site:config', context_system::instance());
 
-loginCheck(false);
+admin_externalpage_setup('local_sqlbuddy', '', null);
 
-outputPage();
+$PAGE->set_heading($SITE->fullname);
+$PAGE->set_title($SITE->fullname . ': ' . get_string('pluginname', 'local_sqlbuddy'));
+
+raise_memory_limit(MEMORY_HUGE);
+set_time_limit(300);
+
+echo $OUTPUT->header();
+
+echo $OUTPUT->heading(get_string('pluginname', 'local_sqlbuddy'));
+echo $OUTPUT->box_start('generalbox boxaligncenter boxwidthnormal');
+echo '<a onclick="sqlbuddy_popup()">Open SQL Buddy</a>';
+echo $OUTPUT->box_end();
+?>
+
+<script type="text/javascript">
+    function sqlbuddy_popup() {
+        var url = "<?php echo new moodle_url('/local/sqlbuddy/vendor/sqlbuddy/index.php'); ?>";
+        var width = document.documentElement.clientWidth * 0.9;
+        var height = document.documentElement.clientHeight * 0.85;
+        
+        window.open(url, "SQLBuddyWindow", "resizable,scrollbars,status");
+    }
+</script>
+
+<?php
+echo $OUTPUT->footer();

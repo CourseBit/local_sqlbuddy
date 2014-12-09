@@ -17,7 +17,7 @@ MIT license
 /* The values below are for the login.php page */
 
 
-require_once __DIR__ . '/../../config.php';
+require_once __DIR__ . '/../../../../config.php';
 
 global $CFG;
 
