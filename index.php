@@ -15,11 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Run the code checker from the web.
+ * SQL Buddy
  *
  * @package    local
- * @subpackage adminer
- * @copyright  Andreas Grabs
+ * @subpackage sqlbuddy
+ * @copyright  2014 CourseBit LLC | www.coursebit.net
+ * @author     Joseph Conradt | joseph.conradt@coursebit.net
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -41,17 +42,18 @@ echo $OUTPUT->header();
 
 echo $OUTPUT->heading(get_string('pluginname', 'local_sqlbuddy'));
 echo $OUTPUT->box_start('generalbox boxaligncenter boxwidthnormal');
-echo '<a onclick="sqlbuddy_popup()">Open SQL Buddy</a>';
+echo sprintf('<button onclick="sqlbuddy_popup()">%s</button>', get_string('open', 'local_sqlbuddy'));
+echo sprintf('<p>%s</p>', get_string('helptext', 'local_sqlbuddy'));
 echo $OUTPUT->box_end();
 ?>
 
 <script type="text/javascript">
     function sqlbuddy_popup() {
         var url = "<?php echo new moodle_url('/local/sqlbuddy/vendor/sqlbuddy/index.php'); ?>";
-        var width = document.documentElement.clientWidth * 0.9;
-        var height = document.documentElement.clientHeight * 0.85;
+        var width = document.documentElement.clientWidth * 0.8;
+        var height = document.documentElement.clientHeight * 0.6;
         
-        window.open(url, "SQLBuddyWindow", "resizable,scrollbars,status");
+        window.open(url, "SQLBuddyWindow", "resizable,scrollbars,status,width=" + width + ",height=" + height);
     }
 </script>
 

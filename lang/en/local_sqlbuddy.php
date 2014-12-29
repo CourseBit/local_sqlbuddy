@@ -26,3 +26,5 @@
  */
 
 $string['pluginname'] = 'SQL Buddy';
+$string['open'] = 'Open SQL Buddy';
+$string['helptext'] = 'Note: SQL Buddy will open in a new window. Ensure you are not blocking popups for this website.';
