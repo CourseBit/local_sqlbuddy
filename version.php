@@ -29,4 +29,4 @@ $plugin->version   = 2015011200;        // The current plugin version (Date: YYY
 $plugin->requires  = 2011112900;        // Requires this Moodle version.
 $plugin->component = 'local_sqlbuddy';
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = "1.0";
+$plugin->release   = "1.1";
