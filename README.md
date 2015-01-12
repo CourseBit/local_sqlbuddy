@@ -22,3 +22,7 @@ No configuration necessary! Simply install the plugin in one of the following wa
 **2. Clone from Github**
 * git clone https://github.com/CourseBit/local_sqlbuddy.git
 * Login to Moodle and access **Notifications** from the **Site administration** block.
+
+## Usage
+
+To use SQL Buddy, simply go to **Site administration** / **Server** / **SQL Buddy**. 
