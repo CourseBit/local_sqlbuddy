@@ -17,8 +17,7 @@
 /**
  * SQL Buddy settings
  *
- * @package    local
- * @subpackage sqlbuddy
+ * @package    local_sqlbuddy
  * @copyright  2014 CourseBit LLC | www.coursebit.net
  * @author     Joseph Conradt | joseph.conradt@coursebit.net
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -27,9 +26,9 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-if ($hassiteconfig) { 
-	
+if ($hassiteconfig) {
+
     $ADMIN->add('server', new admin_externalpage('local_sqlbuddy',
-    	get_string('pluginname', 'local_sqlbuddy'),
-    	new moodle_url('/local/sqlbuddy/index.php')));
+        get_string('pluginname', 'local_sqlbuddy'),
+        new moodle_url('/local/sqlbuddy/index.php')));
 }

@@ -17,8 +17,7 @@
 /**
  * SQL Buddy
  *
- * @package    local
- * @subpackage sqlbuddy
+ * @package    local_sqlbuddy
  * @copyright  2014 CourseBit LLC | www.coursebit.net
  * @author     Joseph Conradt | joseph.conradt@coursebit.net
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
