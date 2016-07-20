@@ -1,0 +1,19 @@
+{
+    "name": "coursebit/moodle-local_sqlbuddly",
+    "description": "Lightweight and simple SQL Buddy allows you to manage your MySQL databases.",
+    "require": {
+        "php": "^5.3.3 || ^7.0"
+    }
+    "type": "library",
+    "keywords": ["moodle","mysql"],
+    "homepage": "https://github.com/CourseBit/moodle-local_sqlbuddy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joseph Conradt",
+            "email": "joseph.conradt@coursebit.net",
+            "homepage": "http://www.coursebit.net",
+            "role": "Developer"
+        }
+    ]
+}
