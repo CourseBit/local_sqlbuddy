@@ -3,7 +3,7 @@
     "description": "Lightweight and simple SQL Buddy allows you to manage your MySQL databases.",
     "require": {
         "php": "^5.3.3 || ^7.0"
-    }
+    },
     "type": "library",
     "keywords": ["moodle","mysql"],
     "homepage": "https://github.com/CourseBit/moodle-local_sqlbuddy",
